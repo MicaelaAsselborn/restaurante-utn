@@ -4,6 +4,7 @@
     box-sizing: border-box;
     /* outline: 1px solid rgb(255, 255, 255); */
     font-family: "Poiret One";
+    scroll-behavior: smooth;
 }
 body{
     background-color: #1d1d1d;
@@ -24,6 +25,7 @@ header{
     background-color: black;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
 header div{
     display: flex;
@@ -46,6 +48,7 @@ nav{
     height: 100vh;
     height: 100dvh;
     background-image: url(./images/food.jpg);
+    align-items: center;
 }
 h1{
     grid-column: 2/3;
@@ -56,4 +59,50 @@ h1{
     font-size: 5em;
     background-color: black;
     border-radius: 15px;
+    
+    padding: 20px;
+}
+
+/* MENU */
+
+#menu{
+    display: grid;
+    grid-template-columns: 10% repeat(4,1fr) 10%;
+    grid-template-rows: 300px 200px repeat(10,200px);
+    text-align: center;
+}
+#titulo-menu{
+    font-size: 52px;
+    grid-row: 2/3;
+    grid-column: 2/6;
+}
+#contenedor{
+    grid-column: 2/6;
+    grid-row: 3/8;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px
+}
+.plato{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: black;
+    border: 2px solid rgba(255, 255, 255, 0.514);
+    border-radius: 5px;
+}
+.plato:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px white;
+}
+.titulo{
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px;
+}
+.descripcion{
+    padding: 10px 5px;
 }

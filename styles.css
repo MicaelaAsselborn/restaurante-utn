@@ -25,7 +25,7 @@ header{
     background-color: black;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 header div{
     display: flex;
@@ -76,7 +76,7 @@ h1{
     grid-row: 2/3;
     grid-column: 2/6;
 }
-#contenedor{
+#contenedor-platos{
     grid-column: 2/6;
     grid-row: 3/8;
     padding: 50px;
@@ -105,4 +105,78 @@ h1{
 }
 .descripcion{
     padding: 10px 5px;
+}
+
+/* GALERIA */
+
+#galeria{
+    display: grid;
+    grid-template-columns: 1fr repeat(20, 100px) 1fr;
+    grid-template-rows: 200px repeat(17, 100px) 100px;
+    background-color: black;
+    text-align: center;
+}
+#titulo-galeria{
+    font-size: 52px;
+    grid-column: 5/16;
+    grid-row: 1/2;
+    align-self: center;
+}
+#galeria img{
+    width: 100%;
+    border-radius: 10px;
+}
+#galeria img:hover{
+    transform: scale(1.3);
+    z-index: 1;
+}
+#camara{
+    grid-column: 9/11;
+    grid-row: 2/4;
+    transform: rotate(3deg);
+}
+#foto1{
+    grid-column: 4/8;
+    grid-row: 3/5;
+    transform: rotate(-3deg);
+}
+#foto2{
+    grid-column: 12/17;
+    grid-row: 2/4;
+    transform: rotate(-1deg);
+}
+#foto3{
+    grid-column: 9/14;
+    grid-row: 5/8;
+    transform: rotate(5deg);
+}
+#foto4{
+    grid-column: 3/7;
+    grid-row: 6/8;
+    transform: rotate(-2deg);
+}
+#foto5{
+    grid-column: 14/17;
+    grid-row: 7/9;
+    transform: rotate(-7deg);
+}
+#foto6{
+    grid-column: 5/10;
+    grid-row: 9/12;
+    transform: rotate(-6deg);
+}
+#foto7{
+    grid-column: 12/16;
+    grid-row: 10/13;
+    transform: rotate(6deg);
+}
+#like{
+    grid-column: 10/12;
+    grid-row: 9/11;
+    transform: rotate(6deg);
+}
+#foto8{
+    grid-column: 7/14;
+    grid-row: 13/16;
+    transform: rotate(0deg);
 }
